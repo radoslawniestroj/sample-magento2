@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="RadoslawNiestroj\PaymentRestrictionPerShipping\Api\Service\ConfigurationReaderInterface" type="RadoslawNiestroj\PaymentRestrictionPerShipping\Service\ConfigurationReader" />
+    <preference for="RadoslawNiestroj\PaymentRestrictionPerShipping\Api\Service\RelationsInterface" type="RadoslawNiestroj\PaymentRestrictionPerShipping\Service\Relations" />
+    <preference for="RadoslawNiestroj\PaymentRestrictionPerShipping\Api\Service\Config\Source\SalesMethodsInterface" type="RadoslawNiestroj\PaymentRestrictionPerShipping\Service\Config\Source\SalesMethods" />
+
+    <type name="Magento\Payment\Model\Checks\Composite">
+        <plugin name="radoslawniestroj_paymentrestrictionpershipping_plugin_magento_payment_service_checks_composite"
+                type="RadoslawNiestroj\PaymentRestrictionPerShipping\Plugin\Magento\Payment\Model\Checks\Composite" sortOrder="10"/>
+    </type>
+</config>
