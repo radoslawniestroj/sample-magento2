@@ -15,9 +15,9 @@ use Psr\Log\LoggerInterface;
 class AddToCartObserver implements ObserverInterface
 {
     public function __construct(
-        public Session $customerSession,
-        public CustomerRepositoryInterface $customerRepositoryInterface,
-        public LoggerInterface $logger
+        private readonly Session $customerSession,
+        private readonly CustomerRepositoryInterface $customerRepositoryInterface,
+        private readonly LoggerInterface $logger
     ) {
     }
 
@@ -39,7 +39,7 @@ class AddToCartObserver implements ObserverInterface
             $customer = $this->customerRepositoryInterface->getById($customerId);
         } catch (NoSuchEntityException|LocalizedException $e) {
             $this->logger->error('There is no customer with given id');
-            throw new  NoSuchEntityException(__('There is no customer with given id'));
+            throw new NoSuchEntityException(__('There is no customer with given id'));
         }
     }
 }
