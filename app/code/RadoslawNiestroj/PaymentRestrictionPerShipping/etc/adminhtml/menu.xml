@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="RadoslawNiestroj_PaymentRestrictionPerShipping::payment_restriction_per_shipping"
+             title="Payment Restriction Per Shipping"
+             module="RadoslawNiestroj_PaymentRestrictionPerShipping"
+             sortOrder="20"
+             parent="RadoslawNiestroj_Base::radoslawniestroj"
+             resource="RadoslawNiestroj_PaymentRestrictionPerShipping::payment_restriction_per_shipping"
+        />
+        <add id="RadoslawNiestroj_PaymentRestrictionPerShipping::config_payment_restriction_per_shipping"
+             title="Configuration"
+             module="RadoslawNiestroj_PaymentRestrictionPerShipping"
+             sortOrder="10"
+             parent="RadoslawNiestroj_PaymentRestrictionPerShipping::payment_restriction_per_shipping"
+             resource="RadoslawNiestroj_PaymentRestrictionPerShipping::config_payment_restriction_per_shipping"
+             action="adminhtml/system_config/edit/section/config_payment_restriction_per_shipping"
+        />
+    </menu>
+</config>

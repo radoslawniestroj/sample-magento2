@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="radoslawniestroj" translate="label" sortOrder="1">
+            <label>Radosław Niestrój</label>
+        </tab>
+
+        <section id="config_additional_settings_base" translate="label" type="text" sortOrder="999" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Additional Settings</label>
+            <tab>radoslawniestroj</tab>
+            <resource>RadoslawNiestroj_Base::config_additional_settings_base</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            </group>
+        </section>
+    </system>
+</config>

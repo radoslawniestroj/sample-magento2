@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="RadoslawNiestroj_Base::radoslawniestroj" title="Radosław Niestrój" translate="title" sortOrder="1">
+                    <resource id="RadoslawNiestroj_Base::additional_settings_base" title="Additional Settings" translate="title" sortOrder="999">
+                        <resource id="RadoslawNiestroj_Base::config_additional_settings_base" title="Configuration" translate="title" sortOrder="10"/>
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

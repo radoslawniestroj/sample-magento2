@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="RadoslawNiestroj_Base::radoslawniestroj"
+             title="Radosław Niestrój"
+             module="RadoslawNiestroj_Base"
+             sortOrder="10"
+             resource="RadoslawNiestroj_Base::radoslawniestroj"
+        />
+        <add id="RadoslawNiestroj_Base::additional_settings_base"
+             title="Additional Settings"
+             module="RadoslawNiestroj_Base"
+             sortOrder="999"
+             parent="RadoslawNiestroj_Base::radoslawniestroj"
+             resource="RadoslawNiestroj_Base::additional_settings_base"
+        />
+        <add id="RadoslawNiestroj_Base::config_additional_settings_base"
+             title="Configuration"
+             module="RadoslawNiestroj_Base"
+             sortOrder="10"
+             parent="RadoslawNiestroj_Base::additional_settings_base"
+             resource="RadoslawNiestroj_Base::config_additional_settings_base"
+             action="adminhtml/system_config/edit/section/config_additional_settings_base"
+        />
+    </menu>
+</config>
